@@ -83,6 +83,20 @@ A route table named `public-rt` was created and associated with `Multi-AZ-VPC`. 
 
 <img width="735" height="914" alt="image" src="https://github.com/user-attachments/assets/5521e950-e8bd-4f15-9d8d-ff6efc98c0dc" />
 
+### 6. Create the Private Route Table
+
+A route table named `private-rt` was created and associated with `Multi-AZ VPC`. No additional routes were added — only the default **local** route is present, meaning private subnet resources can communicate within the VPC but have no path to the internet.
+
+This was a deliberate choice for this lab to avoid NAT Gateway costs. In a production deployment, a NAT Gateway route (`0.0.0.0/0 → NAT Gateway`) would typically be added here to allow controlled outbound internet access while keeping the subnet unreachable from outside.
+
+| Route Table | Destination | Target |
+|---|---|---|
+| private-rt | 10.0.0.0/16 | local |
+
+**Subnets associated:** `private-subnet-1`, `private-subnet-2`
+
+<img width="718" height="910" alt="image" src="https://github.com/user-attachments/assets/eb25e8ff-7d0e-4e69-b11c-2148a6cab16e" />
+
 
 
 
