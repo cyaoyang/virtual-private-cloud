@@ -23,6 +23,7 @@ A managed AWS service placed in a public subnet that lets resources in private s
 
 ### 📌 Elastic IP (EIP)
 A static, public IPv4 address that you allocate and can attach to resources like a NAT Gateway. Unlike a regular auto-assigned public IP, it stays the same even if the underlying resource is stopped/restarted — a NAT Gateway requires one to function.
+
 ---
 
 ## 🎯 Scenario
