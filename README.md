@@ -1,30 +1,30 @@
-Multi-AZ VPC Lab (AWS Console)
+# Multi-AZ VPC Lab (AWS Console)
 
 A hands-on AWS networking lab: designing and deploying a highly-available VPC across multiple Availability Zones, with public and private subnets, built manually through the AWS Console.
 
-Definitions
-🌐 VPC (Virtual Private Cloud)
+### Definitions
+## 🌐 VPC (Virtual Private Cloud)
 A logically isolated virtual network within AWS that you fully control — you define its IP range, and everything else (subnets, gateways, route tables) lives inside it. Think of it as your own private data center carved out of AWS's infrastructure.
 
-🚪 Internet Gateway (IGW)
+## 🚪 Internet Gateway (IGW)
 A component attached to a VPC that allows resources in public subnets to communicate directly with the internet, in both directions (inbound and outbound). Without it, nothing in your VPC can reach the internet at all.
 
-🧩 Subnet
+## 🧩 Subnet
 A subdivision of your VPC's IP range, tied to a single Availability Zone. Subnets are labeled "public" or "private" based on whether their route table sends internet-bound traffic to an Internet Gateway (public) or not (private) — it's the routing, not any inherent property of the subnet, that makes it public or private.
 
-🗺️ Route Table
+## 🗺️ Route Table
 A set of rules ("routes") that determine where network traffic from a subnet is directed. Each subnet is associated with exactly one route table, which decides things like "traffic headed to 0.0.0.0/0 (the internet) goes to the Internet Gateway" or "...goes to the NAT Gateway."
 
-🏢 Availability Zone (AZ)
+## 🏢 Availability Zone (AZ)
 One or more physically separate data centers within an AWS Region, each with independent power, cooling, and networking. Spreading resources across multiple AZs is how you achieve high availability — if one AZ has an outage, the others keep running.
 
-🔁 NAT Gateway (Network Address Translation)
+## 🔁 NAT Gateway (Network Address Translation)
 A managed AWS service placed in a public subnet that lets resources in private subnets initiate outbound connections to the internet (e.g. to download software updates) while remaining unreachable from the internet inbound. It's billed hourly plus data processing charges.
 
-📌 Elastic IP (EIP)
+## 📌 Elastic IP (EIP)
 A static, public IPv4 address that you allocate and can attach to resources like a NAT Gateway. Unlike a regular auto-assigned public IP, it stays the same even if the underlying resource is stopped/restarted — a NAT Gateway requires one to function.
 
-## 🎯 Scenario
+### 🎯 Scenario
 A company is launching a new web application on AWS. 
 
 Requirements:
@@ -35,7 +35,7 @@ Requirements:
 
 **Goal:** Design and build the underlying VPC network that satisfies these requirements.
  
-## 🔧 Solution
+### 🔧 Solution
 
 ### 1. 🌐 VPC 
 VPC named 'Multi-AZ VPC' created sitting in region: Singapore (ap-southeast-1) with IPV4 CIDR 10.0.0.0/16.
