@@ -35,6 +35,25 @@ A static, public IPv4 address that you allocate and can attach to resources like
 >
 > **Goal:** Design and build the underlying VPC network that satisfies these requirements.
 >
-> 1. VPC created sitting in region: Singapore (ap-southeast-1) with IPV4 CIDR 10.0.0.0/16.
+> 1. VPC named 'Multi-AZ VPC' created sitting in region: Singapore (ap-southeast-1) with IPV4 CIDR 10.0.0.0/16.
 >    <img width="725" height="712" alt="image" src="https://github.com/user-attachments/assets/7a34fa0c-1782-4168-b37b-b919e523a91f" />
+>
+> 2. Internet gateway created and attached to Multi-AZ VPC.
+>    <img width="956" height="608" alt="image" src="https://github.com/user-attachments/assets/e1575e2a-0c2a-418e-be16-05acb907abb4" />
+>
+> 3. 2 Public Subnets created in Singapore region (ap-southeast-1). Both public subnets sits in Multi-AZ VPC and auto-assign public IPV4 address are enabled.  Public-subnet-1 with IPV4 CIDR 10.0.1.0/24 sits in availability zone (ap-southeast-1a) and public-subnet-2 with IPV4 CIDR 10.0.0.0/24 sits in availability zone (ap-southeast-1b).
+<img width="728" height="862" alt="image" src="https://github.com/user-attachments/assets/d77d7766-7589-42a2-8812-6e98bdbdc08b" />
+<img width="737" height="867" alt="image" src="https://github.com/user-attachments/assets/17829c10-d1af-4648-b3ba-a146c69846f0" />
+>
+> 4. 2 Private Subnets are created in Singapore region (ap-southeast-1) and are attached to Multi-AZ VPC. Private-subnet-1 with IPV4 CIDR 10.0.10.0/24 sits in availability zone (ap-southeast-1a) and private-subnet-2 with IPV4 CIDR 10.0.11.0/24 sits in availability zone (ap-southeast-1b).
+>
+> <img width="729" height="851" alt="image" src="https://github.com/user-attachments/assets/868149cd-0f0d-4abb-aac7-82f4a008ba62" />
+<img width="738" height="904" alt="image" src="https://github.com/user-attachments/assets/9ac832e7-6acb-44c6-a1ed-8d0ca0de38a4" />
+
+
+
+
+
+
+
 
