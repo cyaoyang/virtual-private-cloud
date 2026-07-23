@@ -25,16 +25,16 @@ A managed AWS service placed in a public subnet that lets resources in private s
 A static, public IPv4 address that you allocate and can attach to resources like a NAT Gateway. Unlike a regular auto-assigned public IP, it stays the same even if the underlying resource is stopped/restarted — a NAT Gateway requires one to function.
 
 ## 🎯 Scenario
-> A company is launching a new web application on AWS. 
->
-> Requirements:
-> - The application must remain available even if one Availability Zone goes down, so it needs to span **at least two AZs**.
-> - Web/app servers that need to be reachable from the internet must sit in **public subnets**.
-> - Databases and internal services must **never be directly reachable from the internet**, but still need outbound access (e.g. for software updates) — so they belong in **private subnets** routed through a NAT Gateway.
-> - The network should follow AWS best practices for a production-style environment: correct CIDR planning, one route table per tier, and no unnecessary public exposure.
->
-> **Goal:** Design and build the underlying VPC network that satisfies these requirements.
-> 
+A company is launching a new web application on AWS. 
+
+Requirements:
+- The application must remain available even if one Availability Zone goes down, so it needs to span **at least two AZs**.
+- Web/app servers that need to be reachable from the internet must sit in **public subnets**.
+- Databases and internal services must **never be directly reachable from the internet**, but still need outbound access (e.g. for software updates) — so they belong in **private subnets** routed through a NAT Gateway.
+- The network should follow AWS best practices for a production-style environment: correct CIDR planning, one route table per tier, and no unnecessary public exposure.
+
+**Goal:** Design and build the underlying VPC network that satisfies these requirements.
+ 
 ## 🔧 Solution
 
 ### 1. 🌐 VPC 
