@@ -2,7 +2,7 @@
 ### A hands-on AWS networking lab: designing and deploying a highly-available VPC across multiple Availability Zones, with public and private subnets, built manually through the AWS Console.
 ---
 
-## Definitions
+## 📖 Definitions
 ### 🌐 VPC (Virtual Private Cloud)
 A logically isolated virtual network within AWS that you fully control — you define its IP range, and everything else (subnets, gateways, route tables) lives inside it. Think of it as your own private data center carved out of AWS's infrastructure.
 
@@ -37,7 +37,7 @@ Requirements:
 **Goal:** Design and build the underlying VPC network that satisfies these requirements.
 ---
  
-## 🔧 Solution
+## 🔧 Solutions
 
 ### 1. 🌐 VPC 
 VPC named 'Multi-AZ VPC' created sitting in region: Singapore (ap-southeast-1) with IPV4 CIDR 10.0.0.0/16.
