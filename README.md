@@ -77,6 +77,18 @@ Internet gateway created and attached to Multi-AZ VPC.
 Public subnet: enable it — these resources (web servers, load balancers) need to be reachable from outside.
 Private subnet: leave it disabled — these resources (app servers, databases) should stay unreachable from outside, even though they can still reach out to the internet via the NAT Gateway.
 
+### 5. Create the Public Route Table
+
+A route table named `public-rt` was created and associated with `Multi-AZ-VPC`. A route was added to direct all internet-bound traffic (`0.0.0.0/0`) to the Internet Gateway, and the table was associated with both public subnets.
+
+| Route Table | Destination | Target |
+|---|---|---|
+| public-rt | 0.0.0.0/0 | Internet Gateway |
+
+**Subnets associated:** `public-subnet-1`, `public-subnet-2`
+<img width="735" height="914" alt="image" src="https://github.com/user-attachments/assets/5521e950-e8bd-4f15-9d8d-ff6efc98c0dc" />
+
+
 
 
 
