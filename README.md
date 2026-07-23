@@ -61,13 +61,19 @@ Internet gateway created and attached to Multi-AZ VPC.
 ### 4. 🔒 Private Subnets
 
 2 Private Subnets are created in Singapore region (ap-southeast-1) and are attached to Multi-AZ VPC. Private-subnet-1 with IPV4 CIDR 10.0.10.0/24 sits in availability zone (ap-southeast-1a) and private-subnet-2 with IPV4 CIDR 10.0.11.0/24 sits in availability zone (ap-southeast-1b).
->
-> <img width="729" height="851" alt="image" src="https://github.com/user-attachments/assets/868149cd-0f0d-4abb-aac7-82f4a008ba62" />
-> <img width="738" height="904" alt="image" src="https://github.com/user-attachments/assets/9ac832e7-6acb-44c6-a1ed-8d0ca0de38a4" />
 
-> 📌Auto-assign public IPv4 gives instances a public IP so the internet can reach them.
-> Public subnet: enable it — these resources (web servers, load balancers) need to be reachable from outside.
-> Private subnet: leave it disabled — these resources (app servers, databases) should stay unreachable from outside, even though they can still reach out to the internet via the NAT Gateway.
+| Subnet Name | Availability Zone | CIDR Block |
+|---|---|---|
+| private-subnet-1 | ap-southeast-1a | 10.0.10.0/24 |
+| private-subnet-2 | ap-southeast-1b | 10.0.11.0/24 |
+
+<img width="729" height="851" alt="image" src="https://github.com/user-attachments/assets/868149cd-0f0d-4abb-aac7-82f4a008ba62" />
+
+<img width="738" height="904" alt="image" src="https://github.com/user-attachments/assets/9ac832e7-6acb-44c6-a1ed-8d0ca0de38a4" />
+
+📌Auto-assign public IPv4 gives instances a public IP so the internet can reach them.
+Public subnet: enable it — these resources (web servers, load balancers) need to be reachable from outside.
+Private subnet: leave it disabled — these resources (app servers, databases) should stay unreachable from outside, even though they can still reach out to the internet via the NAT Gateway.
 
 
 
