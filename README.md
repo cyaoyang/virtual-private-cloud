@@ -51,8 +51,7 @@ A static, public IPv4 address that you allocate and can attach to resources like
 <img width="738" height="904" alt="image" src="https://github.com/user-attachments/assets/9ac832e7-6acb-44c6-a1ed-8d0ca0de38a4" />
 >
 > 📌Auto-assign public IPv4 gives instances a public IP so the internet can reach them.
->
->Public subnet: enable it — these resources (web servers, load balancers) need to be reachable from outside.
+> Public subnet: enable it — these resources (web servers, load balancers) need to be reachable from outside.
 Private subnet: leave it disabled — these resources (app servers, databases) should stay unreachable from outside, even though they can still reach out to the internet via the NAT Gateway.
 
 
