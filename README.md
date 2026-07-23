@@ -18,20 +18,17 @@ A set of rules ("routes") that determine where network traffic from a subnet is 
 ### 🏢 Availability Zone (AZ)
 One or more physically separate data centers within an AWS Region, each with independent power, cooling, and networking. Spreading resources across multiple AZs is how you achieve high availability — if one AZ has an outage, the others keep running.
 
-### 📌 Elastic IP (EIP)
-A static, public IPv4 address that you allocate and can attach to resources like a NAT Gateway. Unlike a regular auto-assigned public IP, it stays the same even if the underlying resource is stopped/restarted — a NAT Gateway requires one to function.
-
 ---
 ## 🎯 Scenario
-> A company is launching a new web application on AWS.
->
-> **Requirements:**
-> - The application must remain available even if one Availability Zone goes down, so it needs to span **at least two AZs**.
-> - Web/app servers that need to be reachable from the internet must sit in **public subnets**.
-> - Databases and internal services must **never be directly reachable from the internet**. For this lab, private subnets are fully isolated from the internet (no outbound access) to keep the build cost-free — in a production environment, a NAT Gateway would typically be added here to allow controlled outbound access.
-> - The network should follow AWS best practices for a production-style environment: correct CIDR planning, one route table per tier, and no unnecessary public exposure.
->
-> **Goal:** Design and build the underlying VPC network that satisfies these requirements.
+A company is launching a new web application on AWS.
+
+**Requirements:**
+- The application must remain available even if one Availability Zone goes down, so it needs to span **at least two AZs**.
+- Web/app servers that need to be reachable from the internet must sit in **public subnets**.
+- Databases and internal services must **never be directly reachable from the internet**. For this lab, private subnets are fully isolated from the internet (no outbound access) to keep the build cost-free — in a production environment, a NAT Gateway would typically be added here to allow controlled outbound access.
+- The network should follow AWS best practices for a production-style environment: correct CIDR planning, one route table per tier, and no unnecessary public exposure.
+
+**Goal:** Design and build the underlying VPC network that satisfies these requirements.
 
 ---
 ## 🔧 Solutions
