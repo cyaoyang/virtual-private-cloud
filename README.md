@@ -1,5 +1,5 @@
 # Multi-AZ VPC Lab (AWS Console)
-A hands-on AWS networking lab: designing and deploying a highly-available VPC across multiple Availability Zones, with public and private subnets, built manually through the AWS Console.
+### A hands-on AWS networking lab: designing and deploying a highly-available VPC across multiple Availability Zones, with public and private subnets, built manually through the AWS Console.
 ---
 
 ## Definitions
