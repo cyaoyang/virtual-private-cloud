@@ -1,7 +1,7 @@
 # Multi-AZ VPC Lab (AWS Console)
 ### A hands-on AWS networking lab: designing and deploying a highly-available VPC across multiple Availability Zones, with public and private subnets, built manually through the AWS Console.
----
 
+---
 ## 📖 Definitions
 ### 🌐 VPC (Virtual Private Cloud)
 A logically isolated virtual network within AWS that you fully control — you define its IP range, and everything else (subnets, gateways, route tables) lives inside it. Think of it as your own private data center carved out of AWS's infrastructure.
@@ -25,7 +25,6 @@ A managed AWS service placed in a public subnet that lets resources in private s
 A static, public IPv4 address that you allocate and can attach to resources like a NAT Gateway. Unlike a regular auto-assigned public IP, it stays the same even if the underlying resource is stopped/restarted — a NAT Gateway requires one to function.
 
 ---
-
 ## 🎯 Scenario
 A company is launching a new web application on AWS. 
 
@@ -36,8 +35,8 @@ Requirements:
 - The network should follow AWS best practices for a production-style environment: correct CIDR planning, one route table per tier, and no unnecessary public exposure.
 
 **Goal:** Design and build the underlying VPC network that satisfies these requirements.
+
 ---
- 
 ## 🔧 Solutions
 
 ### 1. 🌐 VPC 
