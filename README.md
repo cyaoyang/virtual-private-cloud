@@ -98,6 +98,25 @@ This was a deliberate choice for this lab to avoid NAT Gateway costs. In a produ
 <img width="718" height="910" alt="image" src="https://github.com/user-attachments/assets/eb25e8ff-7d0e-4e69-b11c-2148a6cab16e" />
 
 
+---
+## Architecture Diagram
+
+<img width="622" height="552" alt="VPC Architecture drawio (1)" src="https://github.com/user-attachments/assets/4f3ac236-5ebb-44c0-bfec-2f218e1d8ca3" />
+
+---
+## 🧹 Cleanup
+
+This lab used only free-tier-eligible resources — VPC, subnets, route tables,
+and an Internet Gateway. No NAT Gateway or EC2 instances were created.
+
+An unattached Elastic IP was found and released, as unattached Elastic IPs
+are the one exception that incurs an hourly charge even without a NAT Gateway
+or instance attached.
+
+No further cleanup was performed — all core resources (VPC, subnets, route
+tables, Internet Gateway) remain deployed for demonstration purposes and
+incur no ongoing cost.
+
 
 
 
