@@ -86,6 +86,7 @@ A route table named `public-rt` was created and associated with `Multi-AZ-VPC`. 
 | public-rt | 0.0.0.0/0 | Internet Gateway |
 
 **Subnets associated:** `public-subnet-1`, `public-subnet-2`
+
 <img width="735" height="914" alt="image" src="https://github.com/user-attachments/assets/5521e950-e8bd-4f15-9d8d-ff6efc98c0dc" />
 
 
